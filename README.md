@@ -1,5 +1,6 @@
 Creare 4 macchine virtuali
-bbiamo usato:- Debian 11 per il Router
+Abbiamo usato:
+- Debian 11 per il Router
 - Debian 12 per Risorsa e Bastion Host
 - Kali per come macchina esterna
 
