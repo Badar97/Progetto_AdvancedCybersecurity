@@ -102,7 +102,12 @@ se c'è scritto 'nameserver 192.168.1.1', cancellare questa riga e scrivere:
 	nameserver 8.8.8.8
 	nameserver 8.8.4.4
  
-salvare e tornare al terminale
+salvare e tornare al terminale.
+
+L'immagine sottostante descrive la configurazione della nostra infrastruttura:
+
+![Test Alt Text](img/configuration.jpg)
+
 
 
 
