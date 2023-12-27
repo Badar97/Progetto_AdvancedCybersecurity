@@ -106,7 +106,7 @@ salvare e tornare al terminale.
 
 L'immagine sottostante descrive la configurazione della nostra infrastruttura:
 
-![Test Alt Text](img/configuration.jpg)
+![Test Alt Text](img/configuration.png)
 
 
 
