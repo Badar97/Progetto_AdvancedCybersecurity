@@ -1,5 +1,17 @@
 # Advanced Cybersecurity for IT
 
+Il progetto "Infrastruttura Sicura" nasce dalla necessità di creare un ambiente di rete sicuro e resistente alle minacce informatiche. Utilizzando VirtualBox, abbiamo configurato un laboratorio virtuale composto da quattro macchine: tre con Debian 11 e una con Kali Linux. L'obiettivo è sviluppare e testare strategie di difesa contro attacchi informatici in un contesto controllato.
+
+In questo setup, una delle macchine Debian funge da "risorsa critica", ovvero il target principale da proteggere. Le altre due macchine Debian agiscono come supporto, implementando varie misure di sicurezza per difendere la risorsa critica. Kali Linux, noto per i suoi strumenti di penetration testing, è utilizzato per simulare attacchi contro l'infrastruttura, permettendo di testare l'efficacia delle difese messe in atto.
+
+L'idea è di creare un modello di infrastruttura che sia non solo sicuro, ma anche resiliente, adattandosi e rispondendo efficacemente a vari tipi di minacce. Questo progetto serve come campo di prova per strategie di sicurezza, offrendo un ambiente realistico per l'apprendimento e il miglioramento delle competenze in ambito di sicurezza informatica.
+
+In sintesi, l'obiettivo principale è la creazione di un ambiente in cui le connessioni non autorizzate vengano prontamente rifiutate, mentre qualsiasi tentativo di accesso non autorizzato venga tempestivamente individuato e notificato al sistema di sicurezza.
+
+
+
+## CONFIGURAZIONE DELLE VM
+
 Creare 4 macchine virtuali
 Abbiamo usato:
 - Debian 11 per il Router
@@ -9,11 +21,7 @@ Abbiamo usato:
 Per il Router inserire 4 schede di rete: 1 NAT, le altre 3 con Rete Interna 
 (abilitando la modalità promiscua nella Inerfaccia di rete che si collega a Risorsa e Bastion Host)
 
-Per le altre 3 Macchine virtuali inserire 2 schede di rete: 1 NAT, e 1 Rete Interna
-
-
-
-## CONFIGURAZIONE DELLE VM
+Per le altre 3 Macchine virtuali inserire 2 schede di rete: 1 NAT, e 1 Rete Interna.
 
 Aprire le VM, per vedere quali reti sono presenti digitare il comando sul terminale:
 	ip a oppure ifconfig
