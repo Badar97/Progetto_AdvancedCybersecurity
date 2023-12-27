@@ -1,4 +1,4 @@
-## Advanced Cybersecurity for IT
+# Advanced Cybersecurity for IT
 
 Creare 4 macchine virtuali
 Abbiamo usato:
@@ -13,7 +13,7 @@ Per le altre 3 Macchine virtuali inserire 2 schede di rete: 1 NAT, e 1 Rete Inte
 
 
 
-### CONFIGURAZIONE DELLE VM
+## CONFIGURAZIONE DELLE VM
 
 Aprire le VM, per vedere quali reti sono presenti digitare il comando sul terminale:
 	ip a oppure ifconfig
@@ -106,7 +106,7 @@ salvare e tornare al terminale
 
 
 
-### IPTABLES
+## IPTABLES
 
 Successivamente digitare i seguenti comandi, che sono 3 regole dove si rifiuta la comunicazione con tutte e tre le interfacce di rete del Eouter come destinatario:
 
@@ -147,7 +147,7 @@ Dopo aver resettato le regole con il comando
 
 
 
-### SNORT
+## SNORT
 
 Successivamente si può iniziare a scaricare Snort, con il seguente comando:
 
@@ -224,7 +224,7 @@ Altra regola:
 
 
 
-### SQUID
+## SQUID
 Innanzitutto scaricare ed installare Squid sulla VM Bastion Host attraverso il seguente comando:
 
 	sudo apt-get install squid -y
@@ -275,7 +275,7 @@ E infine ridigitare:
 
 
 
-### TRIPWIRE
+## TRIPWIRE
 Innanzitutto scaricare ed installare Tripwire sulla VM Risorsa attraverso il seguente comando:
 
 	sudo apt-get install tripwire -y
@@ -353,7 +353,7 @@ per vedere quali file sono presenti nel path /var/lib/tripwire/report, digitare:
 
 """"""""""""""""""""""""""""""""PROVA""""""""""""""""""""""
 
-si si prova a fare il ping da kali al Router, non sarà possibile ricevere pacchetti, poichè il router blocca la ricezione dei pacchetti dall'indirizzo ip che ha attualmente kali (212.12.12.2), ma se si modifica l'ip di Kali (per esempio mettendo 214.14.14.2) è possibile fae il ping al Router e ricevere pacchetti in dietro. Quindi una volta fatto ciò si può provare a fare un SSH AUTHENTICATION.
+Si prova a fare il ping da kali al Router, non sarà possibile ricevere pacchetti, poichè il router blocca la ricezione dei pacchetti dall'indirizzo ip che ha attualmente kali (212.12.12.2), ma se si modifica l'ip di Kali (per esempio mettendo 214.14.14.2) è possibile fae il ping al Router e ricevere pacchetti in dietro. Quindi una volta fatto ciò si può provare a fare un SSH AUTHENTICATION.
 Digitare prima di tutto su Kali il seguete comando:
 
 	sudo ifconfig eth1 214.14.14.2 #si spaccia per la risorsa
