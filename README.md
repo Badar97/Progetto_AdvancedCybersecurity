@@ -1,4 +1,4 @@
-### Advanced Cybersecurity for IT
+## Advanced Cybersecurity for IT
 
 Creare 4 macchine virtuali
 bbiamo usato:- Debian 11 per il Router
@@ -10,7 +10,7 @@ Per il Router inserire 4 schede di rete: 1 NAT, le altre 3 con Rete Interna
 
 Per le altre 3 Macchine virtuali inserire 2 schede di rete: 1 NAT, e 1 Rete Interna
 
-CONFIGURAZIONE DELLE mACCHINE VIRTUALI
+### CONFIGURAZIONE DELLE MACCHINE VIRTUALI
 Aprire le VM, per vedere quali reti sono presenti digitare il comando sul terminale:
 	ip a oppure ifconfig
 -per Risorsa e Bastion Host si avrà enp0s3 per la NAT e enp0s8 per la Rete Interna
@@ -100,7 +100,8 @@ se c'è scritto 'nameserver 192.168.1.1', cancellare questa riga e scrivere:
  
 salvare e tornare al terminale
 
-## IPTABLES
+### IPTABLES
+
 Successivamente digitare i seguenti comandi, che sono 3 regole dove si rifiuta la comunicazione con tutte e tre le interfacce di rete del Eouter come destinatario:
 
 	sudo iptables -I INPUT -s 212.12.12.2 -j DROP -d 212.12.12.1
@@ -139,7 +140,7 @@ Dopo aver resettato le regole con il comando
 	/sbin/iptables-restore < /home/debian/Documents/iptables_rule.
 
 
-## SNORT
+### SNORT
 Successivamente si può iniziare a scaricare Snort, con il seguente comando:
 
 	sudo apt-get install snort -y
@@ -215,7 +216,7 @@ Altra regola:
 
 
 
-## SQUID
+### SQUID
 Innanzitutto scaricare ed installare Squid sulla VM Bastion Host attraverso il seguente comando:
 
 	sudo apt-get install squid -y
@@ -265,7 +266,7 @@ E infine ridigitare:
 	sudo systemctl restart squid
 
 
-## TRPWIRE
+### TRPWIRE
 Innanzitutto scaricare ed installare Tripwire sulla VM Risorsa attraverso il seguente comando:
 
 	sudo apt-get install tripwire -y
