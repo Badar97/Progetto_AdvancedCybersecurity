@@ -244,6 +244,10 @@ Altra regola:
 
 
 ## SQUID
+
+<p align="center">
+	<img src="img/squid.png" width="300">
+</p>
 Innanzitutto scaricare ed installare Squid sulla VM Bastion Host attraverso il seguente comando:
 
 	sudo apt-get install squid -y
@@ -295,6 +299,10 @@ E infine ridigitare:
 
 
 ## TRIPWIRE
+
+<p align="center">
+	<img src="img/tw.png" width="300">
+</p>
 Innanzitutto scaricare ed installare Tripwire sulla VM Risorsa attraverso il seguente comando:
 
 	sudo apt-get install tripwire -y
