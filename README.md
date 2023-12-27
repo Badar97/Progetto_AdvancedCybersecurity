@@ -121,7 +121,7 @@ L'immagine sottostante descrive la configurazione della nostra infrastruttura:
 
 ## IPTABLES
 
-![Test Alt Text](img/iptables.jpg)
+![Test Alt Text](img/iptables.jpg | width=200)
 Successivamente digitare i seguenti comandi, che sono 3 regole dove si rifiuta la comunicazione con tutte e tre le interfacce di rete del Eouter come destinatario:
 
 	sudo iptables -I INPUT -s 212.12.12.2 -j DROP -d 212.12.12.1
