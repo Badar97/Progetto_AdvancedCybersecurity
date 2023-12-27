@@ -186,9 +186,9 @@ Per controllare che il file di configurazione sia implementato correttamente si 
 	sudo snort -i enp0s9 -c /etc/snort/snort_copy.conf -T #per Bastion Host
  
 Questo comando fa il seguente:
-[] -i enp0s9: specifica l'interfaccia di rete del Bastion Host.
-[] -c /etc/snort/snort2.conf: specifica il percorso del file di configurazione di Snort.
-[] -T: esegue una verifica di sintassi nel file di configurazione senza effettuare effettivamente l'analisi del traffico.
+- -i enp0s9: specifica l'interfaccia di rete del Bastion Host.
+- -c /etc/snort/snort2.conf: specifica il percorso del file di configurazione di Snort.
+- -T: esegue una verifica di sintassi nel file di configurazione senza effettuare effettivamente l'analisi del traffico.
 
 Andare a vere le regole in snort col comando:
 
