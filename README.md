@@ -1,3 +1,4 @@
+### Advanced Cybersecurity for IT
 
 Creare 4 macchine virtuali
 bbiamo usato:- Debian 11 per il Router
@@ -99,7 +100,7 @@ se c'è scritto 'nameserver 192.168.1.1', cancellare questa riga e scrivere:
  
 salvare e tornare al terminale
 
-##IPTABLES
+## IPTABLES
 Successivamente digitare i seguenti comandi, che sono 3 regole dove si rifiuta la comunicazione con tutte e tre le interfacce di rete del Eouter come destinatario:
 
 	sudo iptables -I INPUT -s 212.12.12.2 -j DROP -d 212.12.12.1
@@ -138,7 +139,7 @@ Dopo aver resettato le regole con il comando
 	/sbin/iptables-restore < /home/debian/Documents/iptables_rule.
 
 
-##SNORT
+## SNORT
 Successivamente si può iniziare a scaricare Snort, con il seguente comando:
 
 	sudo apt-get install snort -y
@@ -214,7 +215,7 @@ Altra regola:
 
 
 
-##SQUID
+## SQUID
 Innanzitutto scaricare ed installare Squid sulla VM Bastion Host attraverso il seguente comando:
 
 	sudo apt-get install squid -y
@@ -264,7 +265,7 @@ E infine ridigitare:
 	sudo systemctl restart squid
 
 
-##TRPWIRE
+## TRPWIRE
 Innanzitutto scaricare ed installare Tripwire sulla VM Risorsa attraverso il seguente comando:
 
 	sudo apt-get install tripwire -y
@@ -341,6 +342,7 @@ per vedere quali file sono presenti nel path /var/lib/tripwire/report, digitare:
 
 
 """"""""""""""""""""""""""""""""PROVA""""""""""""""""""""""
+
 si si prova a fare il ping da kali al Router, non sarà possibile ricevere pacchetti, poichè il router blocca la ricezione dei pacchetti dall'indirizzo ip che ha attualmente kali (212.12.12.2), ma se si modifica l'ip di Kali (per esempio mettendo 214.14.14.2) è possibile fae il ping al Router e ricevere pacchetti in dietro. Quindi una volta fatto ciò si può provare a fare un SSH AUTHENTICATION.
 Digitare prima di tutto su Kali il seguete comando:
 
