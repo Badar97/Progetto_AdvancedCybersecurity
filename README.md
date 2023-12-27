@@ -165,6 +165,9 @@ Dopo aver resettato le regole con il comando
 
 ## SNORT
 
+<p align="center">
+	<img src="img/snort.png" width="300">
+</p>
 Successivamente si può iniziare a scaricare Snort, con il seguente comando:
 
 	sudo apt-get install snort -y
