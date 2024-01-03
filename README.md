@@ -26,10 +26,10 @@ Per le altre 3 Macchine virtuali inserire 2 schede di rete: 1 NAT, e 1 Rete Inte
 | Mode  	| VM -> Host | VM <- Host | VM1 <-> VM2 | VM -> Net/LAN | VM <- Net/LAN |
 | ------------- | ---------- | ---------- | ----------- | ------------- | ------------- |
 | Host-only  	| + | + | + | - | - |
-| Internal  	| - | + | + | - | - |
-| Bridged  	| + | + | + | - | - |
-| NAT  		| + | + | + | - | - |
-| NATservice  	| + | + | + | - | - |
+| Internal  	| - | - | + | - | - |
+| Bridged  	| + | + | + | + | + |
+| NAT  		| + | Port forward | - | + | Port forward |
+| NATservice  	| + | Port forward | + | + | Port forward |
 
 
 
