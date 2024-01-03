@@ -48,9 +48,9 @@ Aprire le VM, per vedere quali reti sono presenti digitare il comando sul termin
 
 	ip a oppure ifconfig
  
-- per Risorsa e Bastion Host si avrà enp0s3 per la NAT e enp0s8 per la Rete Interna
-- per Kali si avrà eth0 per la Rete Interna
-- per Router si avrà enp0s3 per la NAT e enp0s8, enp0s9, enp0s10 per le Reti Interne
+- per Risorsa e Bastion Host si avrà `enp0s3` per la NAT e `enp0s8` per la Rete Interna
+- per Kali si avrà `eth0` per la Rete Interna
+- per Router si avrà `enp0s3` per la NAT e `enp0s8`, `enp0s9`, `enp0s10` per le Reti Interne
 
 successivamente, digitale il comando:
 
