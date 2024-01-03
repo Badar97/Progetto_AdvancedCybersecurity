@@ -21,7 +21,12 @@ Abbiamo usato:
 Per il Router inserire 4 schede di rete: 1 NAT, le altre 3 con Rete Interna 
 (abilitando la modalità promiscua nella Inerfaccia di rete che si collega a Risorsa e Bastion Host)
 
-Per le altre 3 Macchine virtuali inserire 2 schede di rete: 1 NAT, e 1 Rete Interna.
+Per le altre 3 Macchine virtuali inserire 2 schede di rete: 1 NAT, e 1 Rete Interna. Questo descritto dalla tabella sottostante:
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 
 L'immagine sottostante descrive la configurazione della nostra infrastruttura:
 
