@@ -23,10 +23,13 @@ Per il Router inserire 4 schede di rete: 1 NAT, le altre 3 con Rete Interna
 
 Per le altre 3 Macchine virtuali inserire 2 schede di rete: 1 NAT, e 1 Rete Interna. Questo descritto dalla tabella sottostante:
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Mode  	| VM -> Host | VM <- Host | VM1 <-> VM2 | VM -> Net/LAN | VM <- Net/LAN |
+| ------------- | ---------- | ---------- | ----------- | ------------- | ------------- |
+| Host-only  	| + | + | + | - | - |
+| Internal  	| - | + | + | - | - |
+| Bridged  	| + | + | + | - | - |
+| NAT  		| + | + | + | - | - |
+| NATservice  	| + | + | + | - | - |
 
 
 
