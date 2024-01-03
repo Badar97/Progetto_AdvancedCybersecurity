@@ -33,9 +33,9 @@ Per le altre 3 Macchine virtuali inserire 2 schede di rete: 1 NAT, e 1 Rete Inte
 
 
 Nella tabella: 
-"+" indica che la comunicazione è possibile. 
-"-" indica che la comunicazione non è possibile. 
-"Port forward" indica che è possibile inoltrare specifiche porte dalla macchina host alla VM.
+- "+" indica che la comunicazione è possibile. 
+- "-" indica che la comunicazione non è possibile. 
+- "Port forward" indica che è possibile inoltrare specifiche porte dalla macchina host alla VM.
 
 
 
@@ -45,10 +45,12 @@ L'immagine sottostante descrive la configurazione della nostra infrastruttura:
 
 
 Aprire le VM, per vedere quali reti sono presenti digitare il comando sul terminale:
+
 	ip a oppure ifconfig
--per Risorsa e Bastion Host si avrà enp0s3 per la NAT e enp0s8 per la Rete Interna
--per Kali si avrà eth0 per la Rete Interna
--per Router si avrà enp0s3 per la NAT e enp0s8, enp0s9, enp0s10 per le Reti Interne
+ 
+- per Risorsa e Bastion Host si avrà enp0s3 per la NAT e enp0s8 per la Rete Interna
+- per Kali si avrà eth0 per la Rete Interna
+- per Router si avrà enp0s3 per la NAT e enp0s8, enp0s9, enp0s10 per le Reti Interne
 
 successivamente, digitale il comando:
 
