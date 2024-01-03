@@ -23,6 +23,11 @@ Per il Router inserire 4 schede di rete: 1 NAT, le altre 3 con Rete Interna
 
 Per le altre 3 Macchine virtuali inserire 2 schede di rete: 1 NAT, e 1 Rete Interna.
 
+L'immagine sottostante descrive la configurazione della nostra infrastruttura:
+
+![Test Alt Text](img/configuration.png)
+
+
 Aprire le VM, per vedere quali reti sono presenti digitare il comando sul terminale:
 	ip a oppure ifconfig
 -per Risorsa e Bastion Host si avrà enp0s3 per la NAT e enp0s8 per la Rete Interna
@@ -111,12 +116,6 @@ se c'è scritto 'nameserver 192.168.1.1', cancellare questa riga e scrivere:
 	nameserver 8.8.4.4
  
 salvare e tornare al terminale.
-
-L'immagine sottostante descrive la configurazione della nostra infrastruttura:
-
-![Test Alt Text](img/configuration.png)
-
-
 
 
 ## IPTABLES
