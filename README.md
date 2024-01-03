@@ -189,7 +189,7 @@ Successivamente si può iniziare a scaricare Snort, con il seguente comando:
 
 	sudo apt-get install snort -y
  
-durante l'installazione chiederà le interfacce che snort ascolta, qui si può inserire il nome delle interfacce per Risorsa e Bastion Host, quindi enp0s9 e enp0s10, in più chiederà anche il range degli indirizzi che andranno in HOME_NET. (comunque può essere fatto anche avanti)
+durante l'installazione chiederà le interfacce che snort ascolta, qui si può inserire il nome delle interfacce per Risorsa e Bastion Host, quindi `enp0s9` e `enp0s10`, in più chiederà anche il range degli indirizzi che andranno in HOME_NET. (comunque può essere fatto anche avanti)
 
 Andare a lavorare sul file di configurazione snort creando però una copia: noi abbiamo  /etc/snort/snort.conf, vogliamo creare snort_copy.conf, per fare questo scriviamo i comandi:
 
@@ -217,9 +217,9 @@ Per controllare che il file di configurazione sia implementato correttamente si 
 	sudo snort -i enp0s9 -c /etc/snort/snort_copy.conf -T #per Bastion Host
  
 Questo comando fa il seguente:
-- -i enp0s9: specifica l'interfaccia di rete del Bastion Host.
-- -c /etc/snort/snort2.conf: specifica il percorso del file di configurazione di Snort.
-- -T: esegue una verifica di sintassi nel file di configurazione senza effettuare effettivamente l'analisi del traffico.
+- `-i enp0s9`: specifica l'interfaccia di rete del Bastion Host.
+- `-c /etc/snort/snort2.conf`: specifica il percorso del file di configurazione di Snort.
+- `-T`: esegue una verifica di sintassi nel file di configurazione senza effettuare effettivamente l'analisi del traffico.
 
 Andare a vere le regole in snort col comando:
 
@@ -326,11 +326,11 @@ Innanzitutto scaricare ed installare Tripwire sulla VM Risorsa attraverso il seg
  
 verranno richieste di inserire due chiavi, queste serviranno per crittografare le regole di configurazione, è importante ricordarsele altrimenti sarà necessario reinstallare il programma.
 
-Creare un file .txt in un path, per il nostro caso abbiamo creato la cartella:
+Creare un file `.txt` in un path, per il nostro caso abbiamo creato la cartella:
 
 	sudo mkdir /home/debian/Documents/Public
  
-creato il file .txt:
+creato il file `.txt`:
 
 	sudo touch /home/debian/Documents/Public/textfile.txt
  
@@ -338,7 +338,7 @@ scrivere nel file il contenuto desiderato:
 
 	sudo nano /home/debian/Documents/Public/textfile.txt
 	
-Successivamente andare a modificare il file twpol.txt:
+Successivamente andare a modificare il file `twpol.txt`:
 
 	sudo nano /etc/tripwire/twpol.txt
  
@@ -371,7 +371,7 @@ Poi digitare il comando:
 
 	sudo /sbin/twadmin --create-polfile -S /etc/tripwire/site.key /etc/tripwire/twpol.txt
  
-Chiederà di inserire la "site passphrase", successivamente scriverà le policy in /etc/tripwire/tw.pol
+Chiederà di inserire la "site passphrase", successivamente scriverà le policy in `/etc/tripwire/tw.pol`
 
 Fatto ciò digitare il comando per il confronto di integrità di Tripwire:
 
@@ -381,11 +381,11 @@ Si può effettuare il controllo del sistema con:
 
 	sudo /sbin/tripwire --check
  
-Il comando sopra produrrà i file di log presenti nel path /var/lib/tripwire/report. Se si vuole visualizzare un file di log particolare basta digitare il comando:
+Il comando sopra produrrà i file di log presenti nel path `/var/lib/tripwire/report`. Se si vuole visualizzare un file di log particolare basta digitare il comando:
 
 	sudo /sbin/twprint -m r --twrfile /var/lib/tripwire/report/Debian-<data_modifica>.twr
  
-per vedere quali file sono presenti nel path /var/lib/tripwire/report, digitare:
+per vedere quali file sono presenti nel path `/var/lib/tripwire/report`, digitare:
 
 	sudo ls /var/lib/tripwire/report
 
