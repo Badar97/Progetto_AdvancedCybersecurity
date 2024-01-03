@@ -31,10 +31,12 @@ Per le altre 3 Macchine virtuali inserire 2 schede di rete: 1 NAT, e 1 Rete Inte
 | NAT  		| + | Port forward | - | + | Port forward |
 | NATservice  	| + | Port forward | + | + | Port forward |
 
+
 Nella tabella: 
 "+" indica che la comunicazione è possibile. 
 "-" indica che la comunicazione non è possibile. 
 "Port forward" indica che è possibile inoltrare specifiche porte dalla macchina host alla VM.
+
 
 
 L'immagine sottostante descrive la configurazione della nostra infrastruttura:
