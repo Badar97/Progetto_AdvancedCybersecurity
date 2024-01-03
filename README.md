@@ -189,7 +189,7 @@ Successivamente si può iniziare a scaricare Snort, con il seguente comando:
 
 	sudo apt-get install snort -y
  
-durante l'installazione chiederà le interfacce che snort ascolta, qui si può inserire il nome delle interfacce per Risorsa e Bastion Host, quindi `enp0s9` e `enp0s10`, in più chiederà anche il range degli indirizzi che andranno in HOME_NET. (comunque può essere fatto anche avanti)
+durante l'installazione chiederà le interfacce che snort ascolta, qui si può inserire il nome delle interfacce per Risorsa e Bastion Host, quindi `enp0s9` e `enp0s10`, in più chiederà anche il range degli indirizzi che andranno in `HOME_NET`. (comunque può essere fatto anche avanti)
 
 Andare a lavorare sul file di configurazione snort creando però una copia: noi abbiamo  /etc/snort/snort.conf, vogliamo creare snort_copy.conf, per fare questo scriviamo i comandi:
 
