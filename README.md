@@ -171,7 +171,8 @@ Per vedere il risultato finale digitare:
 Dopo aver resettato le regole con il comando
 
 	sudo iptables –F
-è possibile ripristinare la configurazione salvata su “iptables_finale” con il comando:
+ 
+è possibile ripristinare la configurazione salvata su `iptables_rule` con il comando:
 
 	/sbin/iptables-restore < /home/debian/Documents/iptables_rule.
 
