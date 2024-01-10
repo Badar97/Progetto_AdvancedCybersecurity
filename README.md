@@ -353,16 +353,25 @@ E impostiamo la nostra regola personalizzata in fondo:
 		/usr			-> $(SEC_INVARIANT) (recurse = 0) ;
 		/var			-> $(SEC_INVARIANT) (recurse = 0) ;
 		/var/tmp		-> $(SEC_INVARIANT) (recurse = 0) ;
-		/home/debian/Documents/Private -> $(SEC_INVARIANT) (recurse = 0) ;
 	}
-	#New Rule
+	#NEW RULES
+ 	#first
 	(
-	  rulename = "OurCustomeRule",
+	  rulename = "Modified Text File",
 	  severity = $(SIG_LOW)
 	)
 	{
 		/home/debian/Documents/Public/textfile.txt -> $(ReadOnly) ;
 	}
+ 	#second
+  	(
+	  rulename = "Accessed Directory",
+	  severity = $(SIG_LOW)
+	)
+	{
+		/home/debian/Documents/Private/ -> $(SEC_INVARIANT) (recurse = 1) ;
+	}
+  	
 
 
 Poi digitare il comando:
