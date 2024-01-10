@@ -256,7 +256,18 @@ Altra regola:
 
 	alert tcp any any -> any 80 (msg:"Access to UNIVPM!!!"; content:"GET /"; nocase; content:"Host: www.univpm.it"; nocase; sid:1000004;)
 
+Una volta implementate le regole e controllato che il file di configurazione non genera errori, digitare il comando:
 
+	sudo snort -q -l /var/log/snort -i enp0s8 -A console -c /etc/snort/snort_copy.conf
+
+tale comando serve per eseguire Snort con una serie specifica di azioni: 
+- `- q`: Questa opzione fa eseguire Snort in modalità "quiet", riducendo le informazioni di output visualizzate sulla console. È utile per limitare i log a solo ciò che è rilevante.
+- `-l /var/log/snort`: Specifica la directory in cui Snort scriverà i log. In questo caso, i log saranno scritti in `/var/log/snort`.
+- `-i enp0s8`: Indica a Snort di ascoltare (o catturare pacchetti) sull'interfaccia di rete `enp0s8`.
+- `-A console`: Questa opzione configura Snort per inviare gli allarmi alla console. Ciò significa che ogni volta che una regola viene attivata, l'allarme verrà visualizzato direttamente sulla console da cui Snort è stato avviato.
+- `-c /etc/snort/snort_copy.conf`: Indica a Snort di utilizzare il file di configurazione specificato, in questo caso `snort_copy.conf` che si trova nella directory `/etc/snort/`. Questo file contiene tutte le configurazioni, le regole e le impostazioni che Snort utilizzerà durante l'esecuzione.
+
+Dopo aver inserito le regole, abbiamo testato Snort eseguendo un ping dalla macchina Kali verso la Risorsa e tentando una connessione SSH, per verificare il rilevamento di queste attività da parte di Snort.
 
 ## SQUID
 
