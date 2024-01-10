@@ -346,12 +346,24 @@ creato il file `.txt`:
 scrivere nel file il contenuto desiderato:
 
 	sudo nano /home/debian/Documents/Public/textfile.txt
+
+Creare un file `.txt` in un path, per il nostro caso abbiamo creato la cartella:
+
+	sudo mkdir /home/debian/Documents/Private
+ 
+creato il file `.txt`:
+
+	sudo touch /home/debian/Documents/Private/notallowed.txt
+ 
+scrivere nel file il contenuto desiderato:
+
+	sudo nano /home/debian/Documents/Private/notallowed.txt
 	
 Successivamente andare a modificare il file `twpol.txt`:
 
 	sudo nano /etc/tripwire/twpol.txt
  
-E impostiamo la nostra regola personalizzata in fondo:
+E impostiamo le nostre regole personalizzate in fondo:
 
 	(
 	  rulename = "Invariant Directories",
