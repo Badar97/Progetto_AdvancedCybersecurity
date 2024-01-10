@@ -387,6 +387,17 @@ Fatto ciò digitare il comando per il confronto di integrità di Tripwire:
 Si può effettuare il controllo del sistema con:
 
 	sudo /sbin/tripwire --check
+
+Al primo controllo dovrebbe far vedere che non è stato modificato nulla avendo tutti zeri nella tabella Rule Summary.
+Successivamente andare a ad effettuare delle modifiche per vedere se le due regole inserite funzionano, quindi digitare:
+
+	sudo nano /home/debian/Documents/Public/textfile.txt
+
+e andare a modificare il file `textfile.txt`. Poi accedere alla cartella `/home/debian/Documents/Private/` e rimuovere i file all'interno di essa:
+
+ 	sudo rm -r /home/debian/Documents/Private/
+
+rifare il check e andare a visualizzare la tabella delle regole.
  
 Il comando sopra produrrà i file di log presenti nel path `/var/lib/tripwire/report`. Se si vuole visualizzare un file di log particolare basta digitare il comando:
 
