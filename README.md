@@ -157,7 +157,8 @@ Poi, le successive regole sono invece inserite in testa alla catena (opzione -I)
 Per prevenire l'IP spoofing, abbiamo implementato regole che assicurano che l'indirizzo IP di una macchina non venga falsificato:
 
 	sudo iptables -A INPUT -i enp0s10 -s 214.14.14.2 -j ACCEPT
- 	sudo iptables -A INPUT -i \!enp0s10 -s 214.14.14.2 -j DROP
+ 	sudo iptables -A INPUT -i enp0s9 -s 214.14.14.2 -j DROP
+  	sudo iptables -A INPUT -i enp0s8 -s 214.14.14.2 -j DROP
 
 Per vedere il risultato finale digitare:
 
