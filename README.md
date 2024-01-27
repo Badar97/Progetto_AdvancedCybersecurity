@@ -176,6 +176,14 @@ Dopo aver resettato le regole con il comando
 
 	/sbin/iptables-restore < /home/debian/Documents/iptables_rule.
 
+Se si vuole cancellare una regola precisa, andare innanzitutto a vedere il numero della regola, digitando:
+
+ 	sudo iptables -L --line-numbers
+
+Poi andare per cancellarla disgitare il seguente comando (NOME_CATENA indica per esempio INPUT, FORWARD):
+
+ 	sudo iptables -D <NOME_CATENA> <numero_regola>
+
 
 
 ## SNORT
