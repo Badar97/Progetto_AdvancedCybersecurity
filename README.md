@@ -182,12 +182,12 @@ Poi andare per cancellarla disgitare il seguente comando (NOME_CATENA indica per
 
  	sudo iptables -D <NOME_CATENA> <numero_regola>
 
-Per eseguire l'IPSpoofing digitare in kali il seguente comando:
+Per eseguire l'IPSpoofing digitare in Kali il seguente comando:
 
 	sudo ifconfig eth0 214.14.14.2
 
  In questo modo Kali si spaccia per la Risorsa ed esegue il ping. 
- Se c'è una regola che previene l'ipspoofing, anche se Kali ha cambiato il suo indirizzo ip non riesce a spaciarsci per la Risorsa perchè si collega in un'altra interfaccia di rete nel Router. Dato che l'interfaccia che usa Risorsa per connettersi al Router è l'enp0s10, mentre l'interfaccia con la quale si collega Kali al Router è l'enp0s8 
+ Se c'è una regola che previene l'ipspoofing, anche se Kali ha cambiato il suo indirizzo ip non riesce a spaciarsci per la Risorsa perchè si collega in un'altra interfaccia di rete nel Router. Dato che l'interfaccia che usa Risorsa per connettersi al Router è l'`enp0s10`, mentre l'interfaccia con la quale si collega Kali al Router è l'`enp0s8`.
 
 ## SNORT
 
